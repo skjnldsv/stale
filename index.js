@@ -6,7 +6,10 @@ const Stale = require('./lib/stale')
 
 module.exports = async app => {
   // Visit all repositories to mark and sweep stale issues
-  const scheduler = createScheduler(app)
+  const scheduler = createScheduler(app, {
+    delay: false, // delay is enabled on first run
+    interval: 15 * 60 * 1000 // 10 minutes
+  })
 
   // Unmark stale issues if a user comments
   const events = [
