@@ -18,7 +18,6 @@
   },
   "dependencies": {
     "@hapi/joi": "^15.0.0",
-    "newrelic": "^5.2.1",
     "probot": "9.2.15",
     "probot-config": "^1.0.1",
     "probot-scheduler": "^2.0.0-beta.1"
