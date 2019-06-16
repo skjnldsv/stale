@@ -1,4 +1,9 @@
-sudo: false
 language: node_js
+dist: xenial
+sudo: false
 node_js:
-  - lts
+  - "lts/*"
+cache:
+  npm: true
+  directories:
+  - node_modules
