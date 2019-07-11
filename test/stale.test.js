@@ -44,7 +44,7 @@ describe('stale', () => {
   test(
     'removes the stale label and ignores if it has already been removed',
     async () => {
-      let stale = new Stale(github, { perform: true, owner: 'probot', repo: 'stale', logger: app.log })
+      const stale = new Stale(github, { perform: true, owner: 'probot', repo: 'stale', logger: app.log })
 
       for (const type of ['pulls', 'issues']) {
         try {
@@ -138,7 +138,7 @@ describe('stale', () => {
   test(
     'should not close issues if daysUntilClose is configured as false',
     async () => {
-      let stale = new Stale(github, { perform: true, owner: 'probot', repo: 'stale', logger: app.log })
+      const stale = new Stale(github, { perform: true, owner: 'probot', repo: 'stale', logger: app.log })
       stale.config.daysUntilClose = false
       stale.getStale = jest.fn().mockImplementation(() => Promise.resolve({ data: { items: [] } }))
       stale.getClosable = jest.fn()
@@ -154,7 +154,7 @@ describe('stale', () => {
   test(
     'should not close issues if the keyword pulls or keyword issues is used, and daysUntilClose is configured as false',
     async () => {
-      let stale = new Stale(github, { perform: true, owner: 'probot', repo: 'stale', logger: app.log })
+      const stale = new Stale(github, { perform: true, owner: 'probot', repo: 'stale', logger: app.log })
       stale.config.pulls = { daysUntilClose: false }
       stale.config.issues = { daysUntilClose: false }
       stale.getStale = jest.fn().mockImplementation(() => Promise.resolve({ data: { items: [] } }))
@@ -171,7 +171,7 @@ describe('stale', () => {
   test(
     'should not close issues if only keyword is configured with the pulls value',
     async () => {
-      let stale = new Stale(github, { perform: true, owner: 'probot', repo: 'stale', logger: app.log })
+      const stale = new Stale(github, { perform: true, owner: 'probot', repo: 'stale', logger: app.log })
       stale.config.only = 'pulls'
       stale.config.daysUntilClose = 1
       stale.getStale = jest.fn().mockImplementation(() => Promise.resolve({ data: { items: [] } }))
@@ -185,7 +185,7 @@ describe('stale', () => {
   test(
     'should not close pull requests if only keyword is configured with the issues value',
     async () => {
-      let stale = new Stale(github, { perform: true, owner: 'probot', repo: 'stale', logger: app.log })
+      const stale = new Stale(github, { perform: true, owner: 'probot', repo: 'stale', logger: app.log })
       stale.config.only = 'issues'
       stale.config.daysUntilClose = 1
       stale.getStale = jest.fn().mockImplementation(() => Promise.resolve({ data: { items: [] } }))
