@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@hapi/joi": "^15.1.1",
-    "probot": "9.9.4",
+    "probot": "9.9.5",
     "probot-config": "^1.1.0",
     "probot-scheduler": "^2.0.0-beta.1"
   },
