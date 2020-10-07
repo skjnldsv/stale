@@ -27,7 +27,7 @@
     "npm": "^5.6"
   },
   "devDependencies": {
-    "jest": "^26.5.0",
+    "jest": "^26.5.2",
     "smee-client": "^1.2.2",
     "standard": "^14.3.4"
   },
