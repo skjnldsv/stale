@@ -7,16 +7,3 @@ updates:
   open-pull-requests-limit: 10
   reviewers:
   - skjnldsv
-  ignore:
-  - dependency-name: "@hapi/joi"
-    versions:
-    - ">= 16.a, < 17"
-  - dependency-name: probot
-    versions:
-    - ">= 10.a, < 11"
-  - dependency-name: probot
-    versions:
-    - ">= 11.a, < 12"
-  - dependency-name: standard
-    versions:
-    - ">= 16.a, < 17"
